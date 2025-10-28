@@ -14,6 +14,7 @@ void RedCentros::agregarCentro(Centro centro)
 {
     if (ABBDeCentros == nullptr)
     {
+        cout << "Creando el nodo raiz " << centro.getCodigo() << endl;
         ABBDeCentros = new NodoABB(centro);
         return;
     }
@@ -28,16 +29,8 @@ void RedCentros::agregarVectorCentros(vector<Centro> centros)
         return;
     }
 
-    int comienzo = 0;
-
-    if (ABBDeCentros == nullptr)
+    for (size_t i = 0; i < centros.size(); ++i) // size_t es un tipo de dato sin signo, a diferencia de int que es con signo
     {
-        ABBDeCentros = new NodoABB(centros[0]);
-        comienzo = 1;
-    }
-    
-    for (size_t i = comienzo; i < centros.size(); ++i) // size_t es un tipo de dato sin signo, a diferencia de int que es con signo
-    {
-        ABBDeCentros->insertar(centros[i]); // usamos -> para acceder al puntero y llamar a la función insertar
+        agregarCentro(centros[i]);
     }
 }
