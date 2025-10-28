@@ -1,6 +1,6 @@
 #ifndef ABB_H
 #define ABB_H
-#include "../centro.h"
+#include "../Centro.h"
 
 class NodoABB {
 public:

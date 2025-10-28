@@ -12,4 +12,4 @@ int main() {
     red.agregarCentro(centro2);
     red.agregarCentro(centro3);
     
-}
+} 
