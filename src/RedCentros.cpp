@@ -4,6 +4,8 @@
 #include <vector>
 using namespace std;
 #include <iostream>
+#include <optional>
+#include <ostream>
 
 RedCentros::RedCentros()
 {
@@ -34,3 +36,13 @@ void RedCentros::agregarVectorCentros(vector<Centro> centros)
         agregarCentro(centros[i]);
     }
 }
+
+void RedCentros::mostrarInfoCentro(std::string codigoCentro){
+    if(ABBDeCentros == nullptr){
+        cout << "El ABB esta vacio." << endl;
+    }
+    Centro centroBuscado=*ABBDeCentros->buscar(codigoCentro);
+    std::cout << centroBuscado.getCodigo() << ", " << centroBuscado.getNombre() << ", " << centroBuscado.getCiudad() <<  ", " << centroBuscado.getCapacidad() << ", " << centroBuscado.getCantPaquetesDiarios() << ", " << centroBuscado.getCantEmpleados() << ". " << '\n';
+}
+
+

@@ -20,4 +20,5 @@ int main() {
     red.agregarCentro(centro4);
     red.agregarCentro(centro5); 
     red.agregarVectorCentros(centros);
+    red.mostrarInfoCentro("DEF");
 }

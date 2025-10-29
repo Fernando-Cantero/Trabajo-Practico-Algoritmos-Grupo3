@@ -3,7 +3,7 @@
 #include <vector>
 #include "Centro.h"
 #include "algoritmos/NodoABB.h"
-
+#include <optional>
 using namespace std;
 
 class RedCentros
@@ -15,7 +15,7 @@ public:
     RedCentros();
     void agregarCentro(Centro centro);
     void agregarVectorCentros(vector<Centro> centros);
-    Centro mostrarInfoCentro(std::string codigo) const;
+    void mostrarInfoCentro(std::string codigo);
     void eliminarCentro(std::string codigo) const;
     void mostrarCentros() const;
     //List<Conexion> caminoMinimoEntre(std::string codigoOrigen, std::string codigoDestino) const;

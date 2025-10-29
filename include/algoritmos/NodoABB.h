@@ -9,8 +9,8 @@ public:
     NodoABB* der;
 
     NodoABB(const Centro centro);
-    void insertar (const Centro centro);
-    //void buscar (const std::string codigo) const;
+    void insertar(const Centro centro);
+    Centro* buscar(const std::string codigo);
 };
 
 #endif 
